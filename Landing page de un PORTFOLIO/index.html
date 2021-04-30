@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SmoothScroll</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stilo_de_painball.css" />
+
+   
+
+      <!-- Scroll -->
+      <script src="jsSCROLL/scriptscroll.js"></script>
+      <script src="jsSCROLL/smooth-scroll.min.js"></script>
+   
+    <script>
+      smoothScroll.init({
+      selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+      selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+      speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+      easing: 'easeInOutCubic', // Easing pattern to use
+      offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+      callback: function ( anchor, toggle ) {} // Function to run after scrolling
+      });
+    </script>
+    
+  </head>
+  <body>
+ 
+    <!-- MENÚ -->
+    <div class="container-fluid      navbar-fixed-top">
+      <div class="row    flex-items-xs-around    menu-1    flex-items-xs-middle  " >
+        <div class="col-xs-4 ">
+          <img src="1.jpg"  class="img-fluid menu-1" alt="Responsive image">
+        </div>
+
+        <div class="col-xs-1">
+          <a data-scroll href="#sec-1" class="btn btn-danger elhoover" role="button" aria-pressed="true">Sección 1</a>
+        </div>
+        <div class="col-xs-1">
+          <a data-scroll href="#sec-2" class="btn btn-danger elhoover" role="button" aria-pressed="true">Sección 2</a>
+        </div>
+        <div class="col-xs-1">
+          <a data-scroll href="#sec-3" class="btn btn-danger elhoover" role="button" aria-pressed="true">Sección 3</a>
+        </div>
+        <div class="col-xs-1">
+          <a data-scroll href="#sec-4" class="btn btn-danger elhoover" role="button" aria-pressed="true">Sección 4</a>
+        </div>
+      </div>
+    </div>
+    <!-- FIN MENU -->
+    
+    <!-- SECCIÓN 1 -->
+    <div class="   row   col-6 col-sm-6 col-xl-6 col-lg-6   slider-1  " id="sec-1" >         
+      <div class=  " div_matter  grafico"> 
+      
+<script src="matter.js"> </script>
+<script >
+    (() => {
+// constants
+const COLOR = {
+WINDOW: '#f8f9fa',
+BAR: '#868e96',
+DOT: '#f8f9fa',
+HEADER: '#868e96',
+TEXT: '#ced4da',
+SOCIAL: '#f06595',
+IMAGE: '#22b8cf'
+};
+
+// variables
+let canvas, elements;
+
+function init() {
+// engine
+let engine = Matter.Engine.create();
+engine.world.gravity.y = 0.5;
+
+// render
+let render = Matter.Render.create({
+element: document.getElementById('container'),
+engine: engine,
+options: {
+width: 800,
+height: 600,
+wireframes: false, // need this or various render styles won't take
+background: COLOR.WINDOW
+}
+});
+Matter.Render.run(render);
+
+// runner
+let runner = Matter.Runner.create();
+Matter.Runner.run(runner, engine);
+
+// fixed bodies
+Matter.World.add(engine.world, [
+// boundaries (top, bottom, left, right)
+wall(400, -10, 800, 20),
+wall(400, 610, 800, 20),
+wall(-10, 300, 20, 600),
+wall(810, 300, 20, 600),
+
+// top bar with 3 dots (left, mid, right)
+rect(400, 20, 800, 40, COLOR.BAR),
+circ(25, 20, 7, COLOR.DOT),
+circ(50, 20, 7, COLOR.DOT),
+circ(75, 20, 7, COLOR.DOT)
+]);
+
+// bodies to toss around
+elements = [
+// header icon
+circ(80, 120, 40, COLOR.IMAGE),
+
+// header main text
+rect(230, 105, 180, 30, COLOR.HEADER),
+rect(420, 105, 180, 30, COLOR.HEADER),
+
+// header sub text
+rect(170, 140, 60, 20, COLOR.HEADER),
+rect(280, 140, 140, 20, COLOR.HEADER),
+
+// social media icons
+circ(740, 100, 20, COLOR.SOCIAL),
+circ(740, 150, 20, COLOR.SOCIAL),
+circ(740, 200, 20, COLOR.SOCIAL),
+
+// top paragraph, first row
+rect(100, 230, 120, 20, COLOR.TEXT),
+rect(210, 230, 80, 20, COLOR.TEXT),
+rect(340, 230, 160, 20, COLOR.TEXT),
+rect(450, 230, 40, 20, COLOR.TEXT),
+rect(520, 230, 80, 20, COLOR.TEXT),
+
+// top paragraph, second row
+rect(60, 260, 40, 20, COLOR.TEXT),
+rect(150, 260, 120, 20, COLOR.TEXT),
+rect(300, 260, 160, 20, COLOR.TEXT),
+rect(450, 260, 120, 20, COLOR.TEXT),
+rect(560, 260, 80, 20, COLOR.TEXT),
+
+// top paragraph, third row
+rect(80, 290, 80, 20, COLOR.TEXT),
+rect(180, 290, 100, 20, COLOR.TEXT),
+rect(270, 290, 60, 20, COLOR.TEXT),
+rect(370, 290, 120, 20, COLOR.TEXT),
+rect(510, 290, 140, 20, COLOR.TEXT),
+
+// thumbnails
+rect(100, 400, 120, 80, COLOR.IMAGE),
+rect(250, 400, 120, 80, COLOR.IMAGE),
+rect(400, 400, 120, 80, COLOR.IMAGE),
+rect(550, 400, 120, 80, COLOR.IMAGE),
+
+// bottom paragraph, first row
+rect(100, 500, 120, 20, COLOR.TEXT),
+rect(190, 500, 40, 20, COLOR.TEXT),
+rect(300, 500, 160, 20, COLOR.TEXT),
+rect(450, 500, 120, 20, COLOR.TEXT),
+rect(560, 500, 80, 20, COLOR.TEXT),
+
+// bottom paragraph, second row
+rect(80, 530, 80, 20, COLOR.TEXT),
+rect(180, 530, 100, 20, COLOR.TEXT),
+rect(270, 530, 60, 20, COLOR.TEXT),
+rect(370, 530, 120, 20, COLOR.TEXT)
+];
+Matter.World.add(engine.world, elements);
+
+canvas = document.querySelector('#container canvas');
+run();
+}
+
+function run() {
+canvas.classList.add('slam');
+setTimeout(slam, 2000);
+}
+
+function slam() {
+// let the bodies hit the floor
+elements.forEach((body) => {
+Matter.Body.setStatic(body, false);
+Matter.Body.setVelocity(body, {
+x: rand(-4, 4),
+y: rand(-6, -4)
+});
+Matter.Body.setAngularVelocity(body, rand(-0.05, 0.05));
+});
+
+// repeat
+canvas.classList.remove('slam');
+setTimeout(run, 5000);
+}
+
+// matter.js has a built in random range function, but it is deterministic
+function rand(min, max) {
+return Math.random() * (max - min) + min;
+}
+
+function wall(x, y, width, height) {
+return Matter.Bodies.rectangle(x, y, width, height,  {
+isStatic: true,
+render: { visible: false }
+});
+}
+
+function rect(x, y, width, height, color) {
+return Matter.Bodies.rectangle(x, y, width, height, {
+isStatic: true,
+restitution: 1,
+render: { fillStyle: color }
+});
+}
+
+function circ(x, y, radius, color) {
+return Matter.Bodies.circle(x, y, radius, {
+isStatic: true,
+restitution: 1,
+render: { fillStyle: color }
+});
+}
+
+window.addEventListener('load', init, false);
+})();
+</script> 
+
+
+<div id="container"></div>
+
+<div class="container-mitad"> <h1> contenedor 2---> seccion1 </h1> </div>
+          
+      </div>
+    </div>
+    <!-- FIN SECCIÓN -->
+        
+      
+    <!-- SECCIÓN 2 -->
+    
+    <div class=" seccion2 flex-items-xs-middle  row    flex-items-xs-middle    slider-2     " id="sec-2"  >         
+    <div class="col-xs-6  contenedorfliper ">
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/schteppe/poly-decomp.js/1ef946f1/build/decomp.min.js"></script>
+    <script src="https://cdn.rawgit.com/liabru/matter-js/0895d81f/build/matter.min.js"> </script>
+    <script src="https://cdn.rawgit.com/liabru/matter-attractors/c470ed42/build/matter-attractors.min.js"></script>
+ 
+  <script src="script.js"> </script>   
+
+
+  <div class="container">
+    <div class="score current-score">
+      score<br><span></span>
+    </div>
+    <div class="score high-score">
+      high score<br><span></span>
+    </div>
+    <button class="trigger left-trigger">tap!</button>
+    <button class="trigger right-trigger">tap!</button>
+  </div>
+</div>
+</div>
+        <!-- FIN SECCIÓN -->
+        
+    
+    
+    
+        <!-- SECCIÓN 3 -->
+      <!--   -->
+      <div class="      row         flex-items-xs-center     slider-3     flex-items-xs-middle   " id="sec-3" >   <!--   -->
+       
+          <div class="col-xs-12 displayer  "><h1 class="bloquito"> Desarrollo web PORTFOLIO </h1></div>   <!--   -->
+          <div class="col-xs-12 displayer  "><h3 class="bloquito">Informatica</h3></div>   <!--   -->
+          <video src="video.mp4" 
+          autoplay="autoplay"
+          loop="true"
+          controls poster="vistaprevia.jpg"
+          type="video/mp4"
+          muted autoplay loop
+          id="myVideo"
+          > 
+        
+      </div>
+   
+    <!-- FIN SECCIÓN -->
+
+    <!-- SECCIÓN 4 -->
+     <!--  el contineir-fluid re dimensiona el div cuando agrandamos y achicamos, y el fluid hace qe ocupe casi toda la pantalla -->
+      <div class="        row        flex-items-xs-center       slider-4       flex-items-xs-middle" id="sec-4" >   <!--   -->
+        <!-- La fila funciona tipo div pero en version fila   -->
+          <div class="col-xs-12 displayer"><h1 class="bloquito" >Atención al publico: 
+            Iván Ponce  WP 1555060646</h1></div>   <!--   -->
+          <div class="col-xs-12 displayer "><h3 class="bloquito">contacto</h3></div>   <!--   -->
+          <video src="Pexels Videos 946147.mp4" 
+          autoplay="autoplay"
+          loop="true"
+          controls poster="vistaprevia.jpg"
+          type="video/mp4"
+          muted autoplay loop
+          id="myVideo"
+          
+            
+          > 
+        </div>
+      </div>
+  
+    <!-- FIN SECCIÓN -->
+    
+    <!-- FOOTER -->
+    
+      <div class=" row footerJEJEJEJE footer"> <h6>Desarrollado por Ivan Ponce</a></h6></div>   <!--   -->
+
+    <!-- FIN FOOTER -->
+
+    
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

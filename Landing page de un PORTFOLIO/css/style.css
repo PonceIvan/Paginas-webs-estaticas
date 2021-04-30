@@ -1,0 +1,263 @@
+/*____________________________  B O D Y  ________________________________________ */ 
+
+body{
+	color:#fff;
+}
+.imagen-menu {
+height: 50%;
+
+}
+
+.menu-1{
+	height: 50px;
+	width: 100%;
+	background: #444;
+position: relative;
+}
+
+
+
+.slider-1, .slider-2, .slider-3, .slider-4{
+	height: 100vh;     
+	
+}
+
+
+.slider-3{
+	background: #32304e
+	;
+}
+.slider-4{
+	background: #B9B07F
+	
+	;
+}
+.footer{
+	background: #444;
+	color:#fff;
+	text-align: center;
+	padding: 10px;
+}
+.elhoover:hover {
+	color: green;
+	
+}
+#myVideo {
+	object-fit: cover;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+	}
+	
+	video::-webkit-media-controls {
+        display: none;
+	}
+
+	.footer h6{
+    height: 100%;
+	width: 100%;
+	position: relative;
+	display: block;
+	}
+/*____________________________  S E C C I O N    1  ________________________________________ */ 
+
+
+	
+		
+
+.div_matter {
+    background-color: rgb(255, 255, 255);
+	}
+
+
+	#container {
+		line-height: 0;
+		position: relative;
+		margin: 0;
+		color: #dee2e6;
+		background-color: #ffffff;
+		font-family: 'Hind', sans-serif;
+		text-transform: uppercase;
+		top: 15%;
+	
+		}
+	
+
+		h1.bloquito, h2.bloquito, h3.bloquito, h4.bloquito ,h5.bloquito      {
+			font-size: 1.5rem;
+			
+		top:  	20%;
+	}
+
+
+
+		@media (max-width: 1006px) 
+		{
+			.menu-1{
+				height: auto;
+				
+				background: #444;
+			}
+				.imagen-menu {
+					height: auto;
+					width: 90%;
+					}
+					.rectangulitos{
+						height: auto;
+						width: auto;
+						position: relative;
+						padding-left: 20px;
+		
+					} 
+
+		    #container canvas { left: 25%;
+			}
+			
+			h1.bloquito, h2.bloquito, h3.bloquito, h4.bloquito ,h5.bloquito      {
+				font-size: 0.9rem;
+				
+			top:  	-350px;
+   
+			   }
+			.container1 canvas {
+				position: relative;
+				left: 50%;
+				border-radius: 8px;
+				width: 55%;
+				height: 100%;
+				top: 133px;
+			}
+			
+			
+			.word , .tapa3 
+             {
+				font-size: 1.2rem;
+				}
+				.tapa1, .tapa2 , .tapa3 
+				{
+				   top: -100px;
+				   }
+				.tapa3
+				   {
+					  top: -70px;
+					  }
+					  .container-textos-seccion3
+{ 
+	line-height: 1rem; 
+	
+}
+
+			}
+
+			@media (max-width: 429px){ 
+				h1.bloquito, h2.bloquito, h3.bloquito, h4.bloquito ,h5.bloquito   { 
+				position: relative;
+				height: auto;
+				font-size: 0.7rem;
+		
+			
+			} 
+						} 
+
+					
+	
+			.trigger {top: 99%;
+		}
+	
+		.left-trigger {
+			top: 100%;
+			z-index: 2222222222222222222222222222222222222222222222222222222222222222222222222;
+			
+		  }
+		  
+		  .right-trigger {
+			top: 100%;
+		
+		  }
+
+	
+.bloquito {
+				padding : 20px;
+				opacity: 45%;
+				color :white;
+				
+				background-color: black;
+				top: -1130px;
+				position: absolute;
+				
+				height: auto;
+				width: auto;
+          z-index: 9;	
+
+			}
+
+	
+
+			
+
+			
+			
+	.container1  { position: relative;
+			display:block;
+			width:auto  ;
+			height: auto;
+            align-self: center;
+		}
+
+			
+		
+
+	
+
+   .bloquito {
+	       top: 35%;
+	
+			position: relative;
+			font-size: 1.5rem ;
+			height: auto;
+			width: auto;}
+		
+
+/*____________________________   S E C C I O N    2   ________________________________________ */ 
+
+
+
+
+
+
+
+
+/*____________________________   S E C C I O N    3   ________________________________________ */ 
+
+
+
+.seccion3-texto2
+{
+
+	font-size: 2em;
+	bottom: 200px;
+	
+}
+.container-textos-seccion3
+{ 
+	position: absolute;
+	font-size: 1.3rem;
+	background-color:black;
+	opacity: 70%;
+
+	width: 100%;
+	z-index: 1111111111111;
+    padding: 5%;
+}
+
+
+.video-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+

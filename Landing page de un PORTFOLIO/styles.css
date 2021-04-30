@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+
+canvas {
+  position: relative;
+
+  border-radius: 8px;
+  transform: translateY(0);
+
+width: 50vw;
+
+  }
+
+  .container1 {
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    height: 60%;
+    width: 50%;
+
+
+    }
+
+
+
+.container1 canvas {
+  position: relative;
+  left: 10%;
+  border-radius: 8px;
+
+
+width: 55%;
+height: 100%;
+
+  }
+
+.slam {
+  animation: 1s slam 1s;        /* el valor original es 1s slam 1s  */ 
+}
+
+@keyframes slam {
+  0% {
+    animation-timing-function: ease-out;
+  }
+  85% {
+    animation-timing-function: ease-in;
+    transform: translateY(-80px);
+  }
+}
+
+
+.container-mitad {
+  
+  background-color: red ;
+
+}
+
+
+

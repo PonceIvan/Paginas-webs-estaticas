@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+.texto_animado_seccion1 {
+position: relative;
+
+text-align: center;
+align-items: center;
+font-family: 'Open Sans', sans-serif;
+font-weight: auto;
+font-size: 200%;}
+
+
+.text {position: relative;
+height: 100%;
+width: 100%;}
+
+
+.p_textito{
+display: inline-block;
+margin: 0;
+color: black ;}
+
+
+.word {
+position: relative;
+}
+
+.letter {
+display: inline-block;
+position: relative;
+
+transform: translateZ(25px);
+transform-origin: 50% 50% 25px;}
+
+
+.letter.out {
+transform: rotateX(90deg);
+transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);}
+
+
+.letter.behind {
+transform: rotateX(-90deg); }
+
+
+
+.letter.in {
+  transform: rotateX(0deg);
+transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);}
+
+
+.wisteria {
+color: black;}
+
+
+.spacio {
+display: relative;
+position: relative;
+float: left;
+transform: translateZ(25px);
+transform-origin: 50% 50% 25px;}
+
+
+
+
+
+.tapa  {
+  opacity: 1;
+  position: absolute;
+display: center ;
+  z-index: 9999999999;
+  opacity: 70%;
+height:auto ;
+width: 100% ;}
+
+  
+
+.tapa1  {
+position: relative;
+display: block;
+z-index: 9999999999;
+
+
+height: auto;
+width: auto;
+}
+.tapa2 {
+  
+  position: relative;
+  display: block;
+
+   bottom: 10%;
+
+  height: 10%;
+  width: 100%;
+  overflow: hidden;
+
+  }
+  .tapa3 {
+    color: white;
+    position: relative;
+    display: block;
+    z-index: 9;
+    opacity: 0%;
+    height:10%;
+    width: 100%;
+    overflow: hidden;
+    }
+
+    .tapa1{
+      animation: mymove 1;
+      animation-delay: 6s;
+      animation-duration: 0s;
+      animation-fill-mode: forwards;
+      opacity:0%;
+      }
+    
+    .tapa2 , .tapa3{
+    animation: mymove 1;
+    animation-delay: 7s;
+    animation-duration: 0s;
+    animation-fill-mode: forwards;
+    opacity:0%;
+    }
+    
+    @keyframes mymove {
+    from {opacity: 0%;}
+    to {opacity:  100%;}
+    }
+   
+  
+  .textA {
+    position: absolute;
+   display: flex;}
+  
+
+
+  
